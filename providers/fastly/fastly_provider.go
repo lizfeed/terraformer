@@ -62,6 +62,7 @@ func (FastlyProvider) GetResourceConnections() map[string]map[string][]string {
 func (p *FastlyProvider) GetSupportedService() map[string]terraformutils.ServiceGenerator {
 	return map[string]terraformutils.ServiceGenerator{
 		"service_v1":       &ServiceV1Generator{},
+		"service_vcl":      &ServiceVCLGenerator{},
 		"tls_subscription": &TLSSubscriptionGenerator{},
 		"user":             &UserGenerator{},
 	}
